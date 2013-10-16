@@ -1,0 +1,35 @@
+// Place all the styles related to the results controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#back_to_search{
+	color:green;
+}
+#cars_listing{
+ #cars_details{
+  	 font-size:25px;
+  	 color:gray;
+  	 border-style:solid;
+  	 border-color:black;
+ 	 }
+ 
+ overflow:scroll
+	#cars_container{
+	border-style:solid;
+	border-color:gray;
+	
+	width:1500px;
+	 color:green;
+	 #images{
+	 height:500px;
+	 width:1500px;
+	 overflow:scroll
+	 #image_container{
+	   border-style :solid;
+	   border-width:medium;
+	   border-color:red;
+	   width:275px;
+	   float:left
+	  }
+	 }
+	}
+}

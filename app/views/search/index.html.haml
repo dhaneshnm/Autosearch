@@ -75,6 +75,13 @@
   %body
     .container
       %H1 Search Used Cars
+      .sidebar-nav 
+        - if session["user"] 
+          = "Hi "+session["user"] 
+          %p
+            = link_to 'signout',"/signout"
+        -else 
+          = link_to "sign in","/auth/developer"    
       .page
         = form_tag("/results", method: "get") do
           = label_tag("car-years", "Year")

@@ -1,7 +1,12 @@
 #back_to_search
  =link_to "Back to Search",search_index_path
 
-%span We have  #{@listings.length} results
+%span Hello
+-if session[:user]
+ =session[:user]
+-else 
+ guest   
+,We have  #{@listings.count} results
 #cars_listing
  = render partial: "listings", collection: @listings
  

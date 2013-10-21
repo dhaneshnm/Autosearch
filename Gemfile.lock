@@ -46,6 +46,7 @@ GEM
       activesupport (>= 3.1, < 4.1)
       haml (>= 3.1, < 4.1)
       railties (>= 3.1, < 4.1)
+    hashie (2.0.5)
     hike (1.2.3)
     i18n (0.6.5)
     journey (1.0.4)
@@ -59,6 +60,9 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25)
     multi_json (1.8.0)
+    omniauth (1.1.4)
+      hashie (>= 1.2, < 3)
+      rack
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -114,6 +118,7 @@ DEPENDENCIES
   haml (~> 4.0.3)
   haml-rails
   jquery-rails
+  omniauth
   rails (= 3.2.11)
   sass-rails (~> 3.2.3)
   sqlite3

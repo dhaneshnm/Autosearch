@@ -1,9 +1,13 @@
 AutoSearch::Application.routes.draw do
+  get "home/index"
+  root to: "home#index"
   get "results/index"
 
   get "search/index"
   get "search/results"
   get '/results/', to: 'results#index'
+  match '/auth/:developer/callback', :to => 'sessions#create'
+  match '/signout',:to =>'sessions#destroy'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

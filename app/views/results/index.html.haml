@@ -1,12 +1,20 @@
-#back_to_search
- =link_to "Back to Search",search_index_path
-
-%span Hello
--if session[:user]
- =session[:user]
--else 
- guest   
-,We have  #{@listings.count} results
-#cars_listing
- = render partial: "listings", collection: @listings
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+      %title Used Cars Search Demo
+      %link{:href => "http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc2/css/bootstrap.min.css", :rel => "stylesheet"}
+  %body 
+    .contaner 
+    .row.marketing  
+      #back_to_search
+        =link_to "Back to Search",search_index_path
+        %br/
+        %span Hello
+        -if session[:user]
+          =session[:user]
+        -else 
+          guest   
+        ,We have  #{@listings.count} results
+        #cars_listing
+          = render partial: "listings", collection: @listings
  

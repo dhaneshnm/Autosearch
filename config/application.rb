@@ -32,7 +32,9 @@ module AutoSearch
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-
+    config.before_configuration do
+      #ENV["YelpData"] = "bing"
+    end
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
@@ -60,3 +62,7 @@ module AutoSearch
     config.assets.version = '1.0'
   end
 end
+
+# http://10.1.10.144:8732/Design_Time_Addresses/FrontRushConnect/api/GetAllRosterMembers/1706/2277
+
+#git remote add origin https://github.com/dhaneshnm/omniauth-yelp.git

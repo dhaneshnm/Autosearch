@@ -1,19 +1,21 @@
 #cars_container 
  #cars_details
-  =listings["title"]
-  %br/
-  %span Price
-  ="$"+listings["price"]
-  %br
-  %span Mileage
-  =listings["mileage"]
-  %br/
+  .col-lg-6
+   =listings["title"]
+   %br/
+   %span Price
+   ="$"+listings["price"]
+   %br
+   %span Mileage
+   =listings["mileage"]
+   %br/
+   %a{href:"#{listings['carfax_report_url']}"} 
+    Car fax URL 
  %span Images Available
  #images
   #image_container
    %img{src: "#{listings['image']}"}
   -listings["additional_images"].each do |extra_image|
    #image_container
-    %img{src: "#{extra_image[1]}"}/
- %a{href:"#{listings['carfax_report_url']}"} 
-  Car fax URL
+    /%img{src: "#{extra_image[1]}"}/
+ 

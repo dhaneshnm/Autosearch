@@ -72,31 +72,41 @@
                //If creating a search interface, set onclick event for the search button.  Make sure the ID used matches your search button ID.
                
           });
-  %body
+  %body.body
     .container
-      %H1 Search Used Cars
-      .sidebar-nav 
-        - if session["user"] 
-          = "Hi "+session["user"] 
-          %p
-            = link_to 'signout',"/signout"
-        -else 
-          = link_to "sign in","/auth/developer"    
-      .page
+  .header
+    %ul.nav.nav-pills.pull-right
+      %li.active
+        %a{href: "#"} Home
+      %li
+        %a{href: "#"} About
+      %li
+        %a{href: "#"} Contact
+    %h3.text-muted 9 A W I B
+  .jumbotron
+    %h2 Search Cars
+    #search
+      #inputs
         = form_tag("/results", method: "get") do
-          = label_tag("car-years", "Year")
           = select_tag("car-years")
-          %br/
-          =label_tag("Makes")
-          =select_tag("car-makes")
-          %br/
-          =label_tag("Models")
+          = select_tag("car-makes")
           =select_tag("car-models")
-          %br/
-          =label_tag("Trims")
           =select_tag("car-model-trims")
-          %br/
           = submit_tag("Search")
-  
-
-  //http://api.lemonfree.com/v2/listings/?make=Toyota&model=Camry&key=[YOUR API KEY]
+  .row.marketing
+    .col-lg-6
+      %h4 9 A W I B
+      %p Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
+      %h4 9 A W I B
+      %p Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
+      %h4 9 A W I B
+      %p Maecenas sed diam eget risus varius blandit sit amet non magna.
+    .col-lg-6
+      %h4 9 A W I B
+      %p Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
+      %h4 9 A W I B
+      %p Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
+      %h4 9 A W I B
+      %p Maecenas sed diam eget risus varius blandit sit amet non magna.
+  .footer
+    %p © 9 A W I B 2013

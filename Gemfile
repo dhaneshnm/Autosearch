@@ -22,6 +22,9 @@ end
 gem "haml", "~> 4.0.3"	
 gem 'haml-rails'
 gem 'jquery-rails'
+#gem 'omniauth-yelp', :path => '/Users/dnm/omniauth-yelp/'
+gem "omniauth-yelp", :git => "git://github.com/dhaneshnm/omniauth-yelp.git"
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

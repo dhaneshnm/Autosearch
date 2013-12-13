@@ -9,7 +9,8 @@
    %span Mileage
    =listings["mileage"]
    %br/
-   %a{href:"#{listings['carfax_report_url']}"} 
+   - uri = URI.decode(listings['carfax_report_url'])
+   %a{href:"#{uri}"} 
     Car fax URL 
  %span Images Available
  #images
